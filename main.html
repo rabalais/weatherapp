@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <title>Jupiter Weather</title> 
+    </head>
+    <body>
+        <div id="main">
+            <div class="header-grid">
+                    <div>
+                        <h1 id="title-header">Jupiter Weather</h1>  
+                    </div>
+                    <div id="search-form">
+                        <form target="_self" method="GET" action="">
+                            <input type="search" id="location-search-box" placeholder="Zipcode or City, ST"/>
+                            <input type="submit" id="search-button" value="Search"/>
+                        </form>
+                    </div>
+                </div>
+            <div>
+            <h2 id="headercs">New York, New York</h2>
+            </div>
+            <div class="wbox-grid">
+                <div class="wbox">
+                    <h3 id="wmain">Clear</h3>
+                    <p id="wdesc">Clear Skies</p>
+                </div>
+
+                <div class="wbox">
+                    <h3 id="wtemp">Temp: </h3>
+                    <p id="wfeels">Feels Like: </p>
+                </div>
+
+                <div class="wbox">
+                    <h3 id="whigh">High: </h3>
+                    <h3 id="wlow">Low: </h3>
+                </div>
+
+                <div class="wbox">
+                    <h3>Wind</h3>
+                    <p>Speed: </p>
+                    <p>Degrees: </p>
+                </div>
+
+                <div class="wbox">
+                    <h3>Pressure: </h3>
+                    <h3>Humidity: </h3>
+                </div>
+            </div>
+        </div>    
+    </body>
+    <script src="get-weather.js"></script>
+</html>
