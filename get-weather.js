@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     });
 
-    $("#search-button").submit(function(event){
+    $("#form-submit").submit(function(event){
         getWeatherInfo(event)
     });
 });
