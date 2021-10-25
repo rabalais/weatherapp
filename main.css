@@ -117,9 +117,9 @@ header {
     color: white;
     border: none;
     padding: 8px 40px;
-    width: 20%;
     font-size: 20px;
     transition-duration: 0.4s;
+    display: inline;
 }
 
 #getlocation:hover {
