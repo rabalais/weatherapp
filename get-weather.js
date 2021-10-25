@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     });
 
-    $("#location-search-box").clcik(function(){
+    $("#location-search-box").click(function(){
 
     });
 });
