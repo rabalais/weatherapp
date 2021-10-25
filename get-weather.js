@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#location-search-box").click(function(){
-
+      getLocation();
     });
 
     $("#search-button").click(function(event){
@@ -13,6 +13,46 @@ $(document).ready(function(){
     });
 });
 
+function animateCover(){
+  var cover = document.getElementById("cover");
+  cover.style.transform = "translateY(-1000px)";
+}
+
+function getLocation(){
+  var request;
+
+  request = $.ajax({
+    url:"https://www.googleapis.com/geolocation/v1/geolocate",
+    type : "POST",
+    dataType: "JSON",
+    data: {
+      key: "AIzaSyAOChJ-ItPrZJESEQSlAVS6Vd0zTaB4H1s"
+    }
+  });
+
+  request.done(function(content){
+    getWeatherByGeo(content);
+  });
+}
+
+function getWeatherByGeo(event) {
+  var request;
+  
+  request = $.ajax({
+    url:"https://api.openweathermap.org/data/2.5/weather",
+      type : "GET",
+      data: {
+        lat: content.location.lat,
+        lon: content.location.lng,
+        appid: "ad0b6203c995478faefc4d58318768ca",
+        units: "imperial"
+      }
+  });
+
+  request.done(function(content){
+    formatData(content);
+  });
+}
 
 function getWeatherInfoByCity(event) {
   var request;
@@ -74,4 +114,5 @@ function formatData(jsonObj) {
   $("#wspeed").text(city_wind_speed+" mph");
   $("#wpressure").text(city_pressure+" hPa");
   $("#whumidity").text(city_humidity+"%");
+  animateCover();
 }

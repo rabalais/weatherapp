@@ -22,7 +22,8 @@ body {
 }
 
 .container {
-    display: inline-grid;
+    display: grid;
+    margin: auto;
     grid-template-columns: auto auto;
     width: 40vw;
 }
@@ -30,6 +31,7 @@ body {
 #headercs {
     text-align: left;
     font-size: 25px;
+    margin: 20px auto;
 }
 
 #wmain {
@@ -72,17 +74,31 @@ body {
 }
 
 header {
+    position: relative;
     background: rgb(255, 123, 0);
     color: white;
     font-size: 30px;
     padding: 20px 0;
+    z-index: 101;
 }
-
 
 .title-area {
     max-width: 960px;
     margin: auto;
 }
+
+#cover {
+    position: fixed;
+    background-color: rgb(255, 123, 0);
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    z-index: 99;
+    transition: transform 3s;
+    transition-timing-function: ease;
+}
+
+
 
 #title-header {
     font-size: 3vw;
