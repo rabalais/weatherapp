@@ -42,8 +42,8 @@ function getWeatherByGeo(event) {
     url:"https://api.openweathermap.org/data/2.5/weather",
       type : "GET",
       data: {
-        lat: content.location.lat,
-        lon: content.location.lng,
+        lat: event.location.lat,
+        lon: event.location.lng,
         appid: "ad0b6203c995478faefc4d58318768ca",
         units: "imperial"
       }
