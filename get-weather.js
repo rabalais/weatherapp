@@ -38,7 +38,7 @@ function getWeatherInfoByZip(event) {
   event.preventDefault();
 
   request = $.ajax({
-      url:"api.openweathermap.org/data/2.5/weather",
+      url:"https://api.openweathermap.org/data/2.5/weather",
       type : "GET",
       data: {
         zip: $("#location-search-box").val(),
