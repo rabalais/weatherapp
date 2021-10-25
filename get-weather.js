@@ -68,12 +68,10 @@ function formatData(jsonObj) {
   $("#headercs").text(city_name);
   $("#wmain").text(city_weather);
   $("#wdesc").text(city_weather_desc);
-  $("#wtemp").text("Temp: "+city_temp);
-  $("#wfeels").text("Feels like: "+city_feels);
-  $("#whigh").text("High: "+city_temp_max);
-  $("#wlow").text("Low: "+city_temp_min);
-  $("#wspeed").text("Speed: "+city_wind_speed);
-  $("#wdeg").text("Degrees: "+city_wind_deg);
-  $("#wpressure").text("Pressure: "+city_pressure);
-  $("#whumidity").text("Humidity: "+city_humidity);
+  $("#wtemp").text(city_temp+" °F");
+  $("#wfeels").text(city_feels+" °F");
+  $("#high-low").text(city_temp_max+"°"+"/"+city_temp_min+"°");
+  $("#wspeed").text(city_wind_speed+" mph");
+  $("#wpressure").text(city_pressure+" hPa");
+  $("#whumidity").text(city_humidity+"%");
 }

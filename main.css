@@ -1,40 +1,91 @@
-.wbox-grid {
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto auto; 
-    column-gap: 10px;
+body {
+    background: rgb(25, 25, 32);
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    margin: auto;
 }
 
 .wbox {
-    border-color: orange;
-    border-radius: 10px;
-    background-color: rgba(211, 211, 211, 0.397);
-    border-style: solid;
-    border-width: 3px;
-    width: 100px;
+    width: 30%;
+    text-align: center;
+    margin: auto;
 }
 
-#title-header {
-    border-style: solid;
-    border-color: orange;
-    border-radius: 10px;
-    border-width: 3px;
-    padding: 15px;
-    width: 120px;
-}
-
-.header-grid {
-    display: grid;
+.container {
+    display: inline-grid;
     grid-template-columns: auto auto;
+    width: 40vw;
+}
+
+#headercs {
+    text-align: left;
+    font-size: 40px;
+}
+
+#wmain {
+    text-align: right;
+    font-size: 40px;
+}
+
+#wdesc {
+    text-align: right;
 }
 
 #search-form {
-    padding: 15px;
-}
-#main {
-    width: 1000px;
-    margin: 0 auto;
+    margin: auto;
 }
 
-body {
+#location-search-box {
+    width: 35vw;
+    height: 30px;
     text-align: center;
+    border: none;
+}
+
+#search-button {
+    background-color: rgb(43, 152, 255);
+    color: white;
+    border: none;
+    padding: 8px 40px;
+    display: inline;
+    transition-duration: 0.4s;
+}
+
+#search-button:hover {
+    background-color: rgb(26, 96, 161);
+}
+
+
+#main {
+    max-width: 960px;
+    margin: auto;
+}
+
+header {
+    background: rgb(255, 123, 0);
+    color: white;
+    font-size: 30px;
+    padding: 20px 0;
+}
+
+
+.title-area {
+    max-width: 960px;
+    margin: auto;
+}
+
+#map {
+    max-width: 960px;
+    width: 40vw;
+    height: 20vw;
+    margin: auto auto 30px auto;
+    background: gray;
 }

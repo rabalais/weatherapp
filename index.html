@@ -8,49 +8,66 @@
         <title>Jupiter Weather</title> 
     </head>
     <body>
-        <div id="main">
-            <div class="header-grid">
-                    <div>
-                        <h1 id="title-header">Jupiter Weather</h1>  
-                    </div>
-                    <div id="search-form">
-                        <form target="_self" method="GET" action="">
-                            <input type="search" id="location-search-box" placeholder="Zipcode or City"/>
-                            <input type="submit" id="search-button" value="Search"/>
-                        </form>
-                    </div>
+        <header>
+            <div class="title-area">
+                <h1 id="title-header">Jupiter Weather</h1>  
+                <div>
+                    <form  id="search-form" target="_self" method="GET" action="">
+                        <input type="search" id="location-search-box" placeholder="Zipcode or City"/>
+                        <input type="submit" id="search-button" value="Search"/>
+                    </form>
                 </div>
-            <div>
-            <h2 id="headercs">City</h2>
             </div>
-            <div class="wbox-grid">
-                <div class="wbox">
+        </header>
+
+        <div id="main">
+            <div class="container">
+                <div class="grid-item">
+                    <h3 id="headercs">City</h3>
+                </div>
+                <div class="grid-item">
                     <h3 id="wmain">Clear</h3>
                     <p id="wdesc">Clear Skies</p>
                 </div>
+            </div>
 
+            <div id="map">
+                <p>im a map B)</p>
+            </div>
+
+            <div class="row">
                 <div class="wbox">
-                    <h3 id="wtemp">Temp: </h3>
-                    <p id="wfeels">Feels Like: </p>
+                    <h3 id="wtemp">Temp</h3>
+                    <p id="high-low">High/Low</p>
                 </div>
-
                 <div class="wbox">
-                    <h3 id="whigh">High: </h3>
-                    <h3 id="wlow">Low: </h3>
-                </div>
-
-                <div class="wbox">
-                    <h3>Wind</h3>
-                    <p id="wspeed">Speed: </p>
-                    <p id="wdeg">Degrees: </p>
-                </div>
-
-                <div class="wbox">
-                    <h3 id="wpressure">Pressure: </h3>
-                    <h3 id="whumidity">Humidity: </h3>
+                    <h3 id="wfeels">Feels</h3>
+                    <p>Feels like</p>
                 </div>
             </div>
-        </div>    
+            
+            <div class="row">
+                <div class="wbox">
+                    <h3 id="wspeed">Wind Speed</h3>
+                    <p>Wind Speed</p>
+                </div>
+                <div class="wbox">
+                    <h3 id="wpressure">Pressure</h3>
+                    <p>Pressure</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="wbox">
+                    <h3>Humidity</h3>
+                </div>
+                <div class="wbox">
+                    <h3 id="whumidity">Humidity</h3>
+                </div>
+            </div>      
+        </div>
+
+        
     </body>
     <script src="get-weather.js"></script>
 </html>
