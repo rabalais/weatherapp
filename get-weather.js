@@ -1,15 +1,9 @@
 $(document).ready(function(){
-
-    $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=New York&units=imperial&appid=ad0b6203c995478faefc4d58318768ca", function(data, status){
-      console.log("Data: " + data + "Status: " + status);
-      formatData(data);
-    });
-
     $("#location-search-box").click(function(){
 
     });
 
-    $("#form-submit").submit(function(event){
+    $("#search-button").click(function(event){
         getWeatherInfo(event)
     });
 });
