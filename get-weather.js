@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
-    $.get("api.openweathermap.org/data/2.5/weather?q=New York&appid=ad0b6203c995478faefc4d58318768ca", function(data, status){
+    $.get("api.openweathermap.org/data/2.5/weather?q=New&20York&appid=ad0b6203c995478faefc4d58318768ca", function(data, status){
       console.log("Data: " + data + "Status: " + status);
-      updateWeather(data);
     });
 
     $("#search-button").click(function(){
