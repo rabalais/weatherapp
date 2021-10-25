@@ -4,12 +4,17 @@ $(document).ready(function(){
     });
 
     $("#search-button").click(function(event){
-        getWeatherInfo(event)
+      if (isNaN($("#location-search-box").val()) == false){
+        getWeatherInfoByZip(event);
+      }
+      else {
+        getWeatherInfoByCity(event);
+      }
     });
 });
 
 
-function getWeatherInfo(event) {
+function getWeatherInfoByCity(event) {
   var request;
   event.preventDefault();
 
@@ -18,6 +23,25 @@ function getWeatherInfo(event) {
       type : "GET",
       data: {
         q: $("#location-search-box").val(),
+        appid: "ad0b6203c995478faefc4d58318768ca",
+        units: "imperial"
+      }
+  });
+
+  request.done(function(content){
+      formatData(content);
+  });
+}
+
+function getWeatherInfoByZip(event) {
+  var request;
+  event.preventDefault();
+
+  request = $.ajax({
+      url:"api.openweathermap.org/data/2.5/weather",
+      type : "GET",
+      data: {
+        zip: $("#location-search-box").val(),
         appid: "ad0b6203c995478faefc4d58318768ca",
         units: "imperial"
       }
