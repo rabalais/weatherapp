@@ -27,7 +27,11 @@ function getWeatherInfo(event) {
         appid: "ad0b6203c995478faefc4d58318768ca",
         units: "imperial"
       }
-  })
+  });
+
+  request.done(function(content){
+      formatData(content);
+  });
 }
 
 function formatData(jsonObj) {
