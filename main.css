@@ -31,7 +31,7 @@ body {
 #headercs {
     text-align: left;
     font-size: 25px;
-    margin: 20px auto;
+    padding-right: auto; 
 }
 
 #wmain {
@@ -87,6 +87,10 @@ header {
     margin: auto;
 }
 
+#title-header {
+    font-size: 50px;
+}
+
 #cover {
     position: fixed;
     background-color: rgb(255, 123, 0);
@@ -98,16 +102,10 @@ header {
     transition-timing-function: ease;
 }
 
-
-
-#title-header {
-    font-size: 50px;
-}
-
 #map {
     max-width: 960px;
     width: 80%;
-    height: 25vw;
+    height: 400px;
     margin: auto auto 30px auto;
     background: gray;
 }
