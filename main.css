@@ -10,12 +10,15 @@ body {
     display: grid;
     grid-template-columns: auto auto;
     text-align: center;
-    margin: auto;
+    color: black;
+    border-radius: 15px;
+    background-color: rgb(240, 240, 240);
+    margin: 10px auto;
+    width: 80%;
 }
 
 .wbox {
     width: 30%;
-    text-align: center;
     margin: auto;
 }
 
@@ -27,16 +30,12 @@ body {
 
 #headercs {
     text-align: left;
-    font-size: 2vw;
+    font-size: 25px;
 }
 
 #wmain {
     text-align: right;
-    font-size: 2vw;
-}
-
-.responsive-text {
-    font-size: 1vw;
+    font-size: 25px;
 }
 
 #wdesc {
