@@ -8,11 +8,26 @@ $(document).ready(function(){
     $("#location-search-box").click(function(){
 
     });
+
+    $("#search-button").submit(function(event){
+        getWeatherInfo(event)
+    });
 });
 
 
-function getWeatherInfo() {
+function getWeatherInfo(event) {
+  var request;
+  event.preventDefault();
 
+  request = $.ajax({
+      url:"https://api.openweathermap.org/data/2.5/weather",
+      type : "GET",
+      data: {
+        q: $("#location-search-box").val(),
+        appid: "ad0b6203c995478faefc4d58318768ca",
+        units: "imperial"
+      }
+  })
 }
 
 function formatData(jsonObj) {
