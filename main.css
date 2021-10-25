@@ -111,3 +111,23 @@ header {
     margin: auto auto 30px auto;
     background: gray;
 }
+
+#getlocation {
+    background-color: rgb(43, 152, 255);
+    color: white;
+    border: none;
+    padding: 8px 40px;
+    width: 20%;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+
+#getlocation:hover {
+    background-color: rgb(26, 96, 161);
+}
+
+#coverContent {
+    width: 100%;
+    top: 200px;
+    position: absolute;
+}

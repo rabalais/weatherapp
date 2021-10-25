@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#location-search-box").click(function(){
+    $("#getlocation").click(function(event){
       getLocation();
     });
 
@@ -92,6 +92,13 @@ function getWeatherInfoByZip(event) {
   });
 }
 
+function initMap(x,y) {
+  map = new google.maps.Map(document.getElementById("map"),{
+    center: { lat: x, lng: y},
+    zoom: 8,
+  });
+}
+
 function formatData(jsonObj) {
   var city_name = jsonObj.name;
   var city_weather = jsonObj.weather[0].main;
@@ -104,6 +111,8 @@ function formatData(jsonObj) {
   var city_humidity = jsonObj.main.humidity;
   var city_wind_speed = jsonObj.wind.speed;
   var city_wind_deg = jsonObj.wind.deg;
+  var lat = jsonObj.coord.lat;
+  var lon = jsonObj.coord.lon;
 
   $("#headercs").text(city_name);
   $("#wmain").text(city_weather);
@@ -114,5 +123,7 @@ function formatData(jsonObj) {
   $("#wspeed").text(city_wind_speed+" mph");
   $("#wpressure").text(city_pressure+" hPa");
   $("#whumidity").text(city_humidity+"%");
+
+  initMap(lat,lon);
   animateCover();
 }
